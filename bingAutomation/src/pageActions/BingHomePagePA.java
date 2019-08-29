@@ -1,6 +1,7 @@
 package pageActions;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import pageObjects.BingHomePagePO;
@@ -10,7 +11,8 @@ public class BingHomePagePA {
 	
 	public static void search(WebDriver driver, String search) {
 		BingHomePagePO.searchField(driver).sendKeys(search);
-		BingHomePagePO.searchBtn(driver).click();
+		BingHomePagePO.searchField(driver).sendKeys(Keys.ENTER);
+//		BingHomePagePO.searchBtn(driver).click();
 	}
 	
 	public static void signIn(WebDriver driver, String id, String pw) {
